@@ -1,0 +1,302 @@
+@media (max-width: 380px) {
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    .corpo {
+        display: grid;
+        grid-template-columns: 380px;
+        grid-template-rows: 50px 250px 100px 900px 340px 400px 80px;
+        grid-template-areas: "cabecalho1" "cabecalho2" "titulo" "faleconosco" "mapa" "dados" "endereco";
+        width: 380px;
+        margin: auto;
+    }
+    .cabecalho1 {
+        grid-area: cabecalho1;
+        background-color: gray;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        font-size: 12pt;
+        font-family: 'Open Sans', sans-serif;
+        padding: 5px;
+        color: white;
+    }
+    .numerocelular {
+        color: white;
+        text-decoration: none;
+    }
+    .iconecelular {
+        width: 15px;
+        height: 15px;
+    }
+    .cabecalho2 {
+        grid-area: cabecalho2;
+        background-image: url("fundocabecalho2.png");
+        background-position: center;
+        position: relative;
+    }
+    .cabecalho2 h1 {
+        color: white;
+        text-shadow: 0.1em 0.1em black;
+        font-family: 'Open Sans', sans-serif;
+        margin: 10px;
+        font-size: 24pt;
+    }
+    .cabecalho2 h3 {
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+        margin: 10px;
+    }
+    /**************** INÍCIO DO MENU ********************/
+    #check {
+        display: none;
+    }
+    #icone {
+        cursor: pointer;
+        padding: 15px;
+        position: absolute;
+        z-index: 1;
+    }
+    .barra {
+        background-color: white;
+        height: 270px;
+        width: 300px;
+        position: absolute;
+        top: 180px;
+        transition: all .2s linear;
+        left: -300px;
+        z-index: 1;
+    }
+    nav {
+        width: 100%;
+        position: absolute;
+        top: 10px;
+    }
+    nav a {
+        text-decoration: none;
+    }
+    .link {
+        background-color: #494949;
+        padding: 20px;
+        font-family: arial;
+        font-size: 15pt;
+        transition: all .2s linear;
+        color: #f4f4f4;
+        border-bottom: 2px solid #222;
+        opacity: 0;
+        margin-top: 200px;
+    }
+    .link:hover {
+        background-color: #8B4513;
+    }
+    #check:checked~.barra {
+        transform: translateX(300px);
+    }
+    #check:checked~.barra nav a .link {
+        opacity: 1;
+        margin-top: 0;
+        transition-delay: .2s;
+    }
+    /**************** FIM DO MENU ********************/
+    .msgmeio {
+        grid-area: msgmeio;
+        font-family: 'Open Sans', sans-serif;
+        margin: auto;
+        padding: 20px;
+    }
+    .titulo {
+        grid-area: titulo;
+        background-image: url('fundo.jpg');
+        display: grid;
+    }
+    .titulo h1 {
+        color: white;
+        text-shadow: 0.1em 0.1em black;
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+        font-size: 22pt;
+        justify-self: center;
+        align-self: center;
+    }
+    /*------------------------------------*\
+    formulário
+\*------------------------------------*/
+    @import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+    .faleconosco {
+        grid-area: faleconosco;
+        display: grid;
+        grid-template-columns: 380px;
+        grid-template-rows: 580px 300px;
+        grid-template-areas: "contact" "demaiscontatos";
+    }
+    #contact {
+        grid-area: contact;
+    }
+    #contact #form {
+        width: 380px;
+        float: left;
+    }
+    #contact #form span {
+        display: block;
+        float: left;
+        width: 100px;
+        padding-top: 5px;
+        font-size: 20px;
+        font-family: 'Open Sans', sans-serif;
+    }
+    #contact #form input {
+        float: left;
+        width: 270px;
+        border: 0px;
+        color: #F1F1F1;
+        padding: 10px 10px 10px 30px;
+        font-size: 16px;
+        font-family: 'Open Sans', sans-serif;
+        margin-bottom: 10px;
+    }
+    #contact #form textarea {
+        float: left;
+        border: 0px;
+        width: 270px;
+        height: 250px;
+        padding: 10px 10px 10px 30px;
+        font-size: 16px;
+        font-family: 'Open Sans', sans-serif;
+        color: #F1F1F1;
+        resize: none;
+    }
+    #contact #form input.name {
+        background: #222222 url(http://img7.uploadhouse.com/fileuploads/17737/177370145f09fe433945815665aa214f80dbc6af.png) no-repeat 10px 8px;
+    }
+    #contact #form input.email {
+        background: #222222 url(http://img6.uploadhouse.com/fileuploads/17737/177370138cc63992182149e9befabff3eafa6d23.png) no-repeat 10px 9px;
+    }
+    #contact #form input.telefone {
+        background: #222222 url(https://img2.uploadhouse.com/fileuploads/28592/28592042e2ccb6af2f591a930439f3585ac67ff9.png) no-repeat 10px 9px;
+    }
+    #contact #form textarea.message {
+        background: #222222 url(http://img3.uploadhouse.com/fileuploads/17737/1773701229ed8c2f465a8274623ca8976adaf196.png) no-repeat 10px 8px;
+    }
+    #contact #form input.submit {
+        cursor: pointer;
+        width: 100px;
+        height: 40px;
+        float: left;
+        padding: 0px 0px 5px 0px;
+        margin: 10px 16px 0px 0px;
+        background: #222222;
+        color: #F1F1F1;
+        font-size: 18px;
+        font-family: 'Open Sans', sans-serif;
+    }
+    .demaiscontatos {
+        grid-area: demaiscontatos;
+        display: grid;
+        grid-template-columns: 80px 300px;
+        grid-template-rows: 100px 100px 100px;
+        grid-template-areas: "cliqueaqui msgcliqueaqui" "whatsappleandro comentarioleandro" "whatsappjesse comentariojesse";
+        font-size: 12px;
+        font-family: 'Open Sans', sans-serif;
+        ;
+    }
+    .cliqueaqui {
+        grid-area: cliqueaqui;
+        justify-self: center;
+        align-self: center;
+    }
+    .msgcliqueaqui {
+        grid-area: msgcliqueaqui;
+        justify-self: start;
+        align-self: center;
+        font-size: 13pt;
+    }
+    .whatsappleandro {
+        grid-area: whatsappleandro;
+        justify-self: center;
+        align-self: center;
+    }
+    .msgwhatsappleandro {
+        grid-area: comentarioleandro;
+        justify-self: start;
+        align-self: center;
+        font-size: 11pt;
+        padding-left: 0px;
+    }
+    .whatsappjesse {
+        grid-area: whatsappjesse;
+        justify-self: center;
+        align-self: center;
+    }
+    .msgwhatsappjesse {
+        grid-area: comentariojesse;
+        justify-self: start;
+        align-self: center;
+        font-size: 11pt;
+        padding-left: 0px;
+    }
+    /***********************************************/
+    .mapa {
+        grid-area: mapa;
+        background-color: gray;
+        font-size: 10pt;
+        font-family: 'Open Sans', sans-serif;
+        color: white;
+        text-align: center;
+        margin-top: 20px;
+        width: 380px;
+    }
+    .dados {
+        grid-area: dados;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 200px 200px;
+        grid-template-areas: "figempresa empresa" "fighorario horario";
+        padding: 20px;
+    }
+    .figempresa {
+        grid-area: figempresa;
+        justify-self: end;
+        align-self: center;
+    }
+    .figempresapng {
+        width: 70px;
+        height: 70px;
+    }
+    .empresa {
+        grid-area: empresa;
+        font-family: 'Open Sans', sans-serif;
+        justify-self: left;
+        align-self: center;
+    }
+    .fighorario {
+        grid-area: fighorario;
+        justify-self: end;
+        align-self: center;
+    }
+    .fighorariopng {
+        width: 70px;
+        height: 70px;
+    }
+    .horario {
+        grid-area: horario;
+        font-family: 'Open Sans', sans-serif;
+        justify-self: left;
+        align-self: center;
+    }
+    .endereco {
+        grid-area: endereco;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        background-color: gray;
+        padding: 20px;
+    }
+    .endereco p {
+        font-size: 12pt;
+        font-family: 'Open Sans', sans-serif;
+        color: white;
+    }
+}

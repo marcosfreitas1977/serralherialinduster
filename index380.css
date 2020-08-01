@@ -1,0 +1,286 @@
+@media (max-width: 380px) {
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    .corpo {
+        display: grid;
+        grid-template-columns: 380px;
+        grid-template-rows: 50px 250px 208px 200px 530px 340px 350px 80px;
+        grid-template-areas: "cabecalho1" "cabecalho2" "galeria" "msgmeio" "msgservicos" "mapa" "dados" "endereco";
+        width: 380px;
+        margin: auto;
+    }
+    .cabecalho1 {
+        grid-area: cabecalho1;
+        background-color: gray;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        font-size: 12pt;
+        font-family: 'Open Sans', sans-serif;
+        padding: 5px;
+        color: white;
+    }
+    .numerocelular {
+        color: white;
+        text-decoration: none;
+    }
+    .iconecelular {
+        width: 15px;
+        height: 15px;
+    }
+    .cabecalho2 {
+        grid-area: cabecalho2;
+        background-image: url("fundocabecalho2.png");
+        background-position: center;
+        position: relative;
+    }
+    .cabecalho2 h1 {
+        color: white;
+        text-shadow: 0.1em 0.1em black;
+        font-family: 'Open Sans', sans-serif;
+        margin: 10px;
+        font-size: 24pt;
+    }
+    .cabecalho2 h3 {
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+        margin: 10px;
+    }
+    /**************** INÍCIO DO MENU ********************/
+    #check {
+        display: none;
+    }
+    #icone {
+        cursor: pointer;
+        padding: 15px;
+        position: absolute;
+        z-index: 1;
+    }
+    .barra {
+        background-color: white;
+        height: 270px;
+        width: 300px;
+        position: absolute;
+        top: 180px;
+        transition: all .2s linear;
+        left: -300px;
+        z-index: 1;
+    }
+    nav {
+        width: 100%;
+        position: absolute;
+        top: 10px;
+    }
+    nav a {
+        text-decoration: none;
+    }
+    .link {
+        background-color: #494949;
+        padding: 20px;
+        font-family: arial;
+        font-size: 15pt;
+        transition: all .2s linear;
+        color: #f4f4f4;
+        border-bottom: 2px solid #222;
+        opacity: 0;
+        margin-top: 200px;
+    }
+    .link:hover {
+        background-color: #8B4513;
+    }
+    #check:checked~.barra {
+        transform: translateX(300px);
+    }
+    #check:checked~.barra nav a .link {
+        opacity: 1;
+        margin-top: 0;
+        transition-delay: .2s;
+    }
+    /**************** FIM DO MENU ********************/
+    /**************** EXIBIÇÃO DOS SLIDES ABAIXO DO CABEÇALHO ********************/
+    /**************** EXIBIÇÃO DOS SLIDES ABAIXO DO CABEÇALHO ********************/
+    .galeria {
+        background-image: url('fundo.jpg');
+        grid-area: galeria;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "foto";
+        width: 100%;
+        height: 208px;
+        overflow: hidden;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .foto {
+        grid-area: foto;
+        display: block;
+        margin-top: 0px;
+        align-items: center;
+        justify-self: center;
+        opacity: 0;
+        animation-name: animacao;
+        animation-duration: 21s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes animacao {
+        25% {
+            opacity: 1;
+            transform: scale(1.1, 1.1);
+        }
+        50% {
+            opacity: 0;
+        }
+    }
+    .foto:nth-child(1) {
+        animation-delay: 0s;
+    }
+    .foto:nth-child(2) {
+        animation-delay: 3s;
+    }
+    .foto:nth-child(3) {
+        animation-delay: 6s;
+    }
+    .foto:nth-child(4) {
+        animation-delay: 9s;
+    }
+    .foto:nth-child(5) {
+        animation-delay: 12s;
+    }
+    .foto:nth-child(6) {
+        animation-delay: 15s;
+    }
+    .foto:nth-child(7) {
+        animation-delay: 18s;
+    }
+    /**********************************/
+    .msgmeio {
+        grid-area: msgmeio;
+        background-color: white;
+        font-family: 'Open Sans', sans-serif;
+        margin: auto;
+        font-size: 9pt;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .soldador {
+        width: 60px;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+    .msgservicos {
+        grid-area: msgservicos;
+        background-color: white;
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        grid-template-rows: 200px 200px 130px;
+        grid-template-areas: "seta1 q1" "seta2 q2" "seta3 q3";
+    }
+    .setapng {
+        width: 30px;
+        height: 30px;
+        margin: 10px;
+    }
+    .seta1 {
+        grid-area: seta1;
+        justify-self: end;
+    }
+    .seta2 {
+        grid-area: seta2;
+        justify-self: end;
+    }
+    .seta3 {
+        grid-area: seta3;
+        justify-self: end;
+    }
+    .quadro1 {
+        grid-area: q1;
+        background-color: white;
+        font-size: 14pt;
+        font-family: 'Open Sans', sans-serif;
+    }
+    .quadro2 {
+        grid-area: q2;
+        background-color: white;
+        font-size: 14pt;
+        font-family: 'Open Sans', sans-serif;
+    }
+    .quadro3 {
+        grid-area: q3;
+        background-color: white;
+        font-size: 14pt;
+        font-family: 'Open Sans', sans-serif;
+    }
+    .mapa {
+        grid-area: mapa;
+        background-color: gray;
+        font-size: 10pt;
+        font-family: 'Open Sans', sans-serif;
+        color: white;
+        text-align: center;
+        width: 380px;
+    }
+    .dados {
+        grid-area: dados;
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        grid-template-rows: 150px 150px;
+        grid-template-areas: "figempresa empresa" "fighorario horario";
+        padding: 30px;
+        padding-top: 40px;
+    }
+    .figempresa {
+        grid-area: figempresa;
+        justify-self: end;
+        align-self: center;
+    }
+    .figempresapng {
+        width: 70px;
+        height: 70px;
+    }
+    .empresa {
+        grid-area: empresa;
+        font-family: 'Open Sans', sans-serif;
+        justify-self: left;
+        align-self: center;
+        margin-left: 25px;
+    }
+    .fighorario {
+        grid-area: fighorario;
+        justify-self: end;
+        align-self: center;
+    }
+    .fighorariopng {
+        width: 70px;
+        height: 70px;
+    }
+    .horario {
+        grid-area: horario;
+        font-family: 'Open Sans', sans-serif;
+        justify-self: left;
+        align-self: center;
+        margin-left: 25px;
+    }
+    .endereco {
+        grid-area: endereco;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        background-color: gray;
+        padding: 20px;
+    }
+    .endereco p {
+        font-size: 12pt;
+        font-family: 'Open Sans', sans-serif;
+        color: white;
+    }
+}
