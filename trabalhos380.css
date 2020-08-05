@@ -6,7 +6,7 @@
     .corpo {
         display: grid;
         grid-template-columns: 380px;
-        grid-template-rows: 50px 250px 100px 1550px 340px 400px 80px;
+        grid-template-rows: 50px 250px 100px 2180px 340px 400px 80px;
         grid-template-areas: "cabecalho1" "cabecalho2" "trabalhos" "galeria" "mapa" "dados" "endereco";
         width: 380px;
         margin: auto;
