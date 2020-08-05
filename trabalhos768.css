@@ -37,8 +37,13 @@
         background-image: url("fundocabecalho2.png");
         background-position: center;
         position: relative;
+        display: grid;
+        grid-template-columns: 200px auto;
+        grid-template-rows: 100px 50px 50px;
+        grid-template-areas: "logo h1" "logo h3" "logo icone";
     }
     .cabecalho2 h1 {
+        grid-area: h1;
         color: white;
         text-shadow: 0.1em 0.1em black;
         font-family: 'Open Sans', sans-serif;
@@ -46,9 +51,19 @@
         font-size: 36pt;
     }
     .cabecalho2 h3 {
+        grid-area: h3;
         color: white;
         font-family: 'Open Sans', sans-serif;
         margin: 10px;
+    }
+    #icone {
+        grid-area: icone;
+    }
+    .logo {
+        grid-area: logo;
+        width: 200px;
+        height: 200px;
+        margin-top: 25px;
     }
     /**************** INÍCIO DO MENU ********************/
     #check {
@@ -65,7 +80,7 @@
         height: 270px;
         width: 300px;
         position: absolute;
-        top: 180px;
+        top: 220px;
         transition: all .2s linear;
         left: -300px;
         z-index: 1;
